@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "VMD Workspace",
+    "welcome": "Welcome to VMD Workspace"
+  },
+  "shell": {
+    "source": "Source",
+    "live": "Live",
+    "split": "Split",
+    "reading": "Reading",
+    "saved": "Saved",
+    "unsaved": "Unsaved",
+    "words": "words",
+    "chars": "chars"
+  },
+  "actions": {
+    "newDocument": "New Document",
+    "openFile": "Open File",
+    "openFolder": "Open Folder",
+    "save": "Save",
+    "settings": "Settings"
+  }
+}

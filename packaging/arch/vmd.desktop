@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=VMD
+Comment=Offline-first Markdown workspace with first-class Persian and English typography
+Exec=vmd %F
+Icon=vmd
+Terminal=false
+Type=Application
+Categories=Office;Development;TextEditor;
+MimeType=text/markdown;text/x-markdown;text/plain;
+StartupNotify=true
+StartupWMClass=VMD
+Keywords=markdown;editor;workspace;bidi;persian;preview;

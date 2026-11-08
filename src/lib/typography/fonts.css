@@ -1,0 +1,58 @@
+/**
+ * VMD Typography & Font Face Definitions
+ * 100% offline-bundled OFL-1.1 fonts.
+ */
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/src/assets/fonts/vazirmatn/Vazirmatn.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('/src/assets/fonts/google-sans/GoogleSansFlex.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/src/assets/fonts/plus-jakarta-sans/PlusJakartaSans.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/src/assets/fonts/jetbrains-mono/JetBrainsMono.woff2') format('woff2');
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --font-persian: 'Vazirmatn', -apple-system, system-ui, sans-serif;
+  --font-english: 'Google Sans Flex', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-base-size: 15px;
+  --line-height-base: 1.65;
+}
+
+/* Persian RTL selector */
+[dir="rtl"],
+:lang(fa) {
+  font-family: var(--font-persian);
+}
+
+/* Code, pre, and monospace selectors */
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono) !important;
+}

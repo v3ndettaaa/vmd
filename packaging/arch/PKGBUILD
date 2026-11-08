@@ -1,0 +1,27 @@
+# Maintainer: VMD Team <contact@vmd.app>
+pkgname=vmd
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Offline-first Markdown desktop workspace with first-class Persian & English typography"
+arch=('x86_64')
+url="https://github.com/vmd-org/vmd"
+license=('MIT' 'OFL-1.1')
+depends=('webkit2gtk-4.1' 'gtk3' 'glibc')
+makedepends=('cargo' 'nodejs' 'pnpm')
+source=("$pkgname.desktop" "$pkgname.xml" "$pkgname.svg")
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+package() {
+  # Desktop entry
+  install -Dm644 "$srcdir/$pkgname.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
+
+  # MIME type database entry
+  install -Dm644 "$srcdir/$pkgname.xml" "$pkgdir/usr/share/mime/packages/$pkgname.xml"
+
+  # Scalable icon
+  install -Dm644 "$srcdir/$pkgname.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
+
+  # Target binary placeholder
+  install -d "$pkgdir/usr/bin"
+  install -Dm755 "/dev/null" "$pkgdir/usr/bin/$pkgname" || true
+}

@@ -1,0 +1,40 @@
+/**
+ * VMD Effects & Glassmorphism Styling
+ * Supports standard GPU-accelerated glassmorphism and instant fallback to solid tokens.
+ */
+
+:root {
+  --glass-blur: 16px;
+  --glass-bg: rgba(20, 20, 25, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --surface-solid: #141419;
+  --transition-effects: backdrop-filter 0.15s ease, background-color 0.15s ease;
+}
+
+/* Glass panel default style */
+.glass-panel {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-effects);
+}
+
+/* Reduced Effects Mode: zero GPU blur, solid high-contrast backgrounds */
+:root.reduced-effects,
+.reduced-effects {
+  --glass-blur: 0px !important;
+  --glass-bg: var(--surface-solid) !important;
+  --glass-border: rgba(255, 255, 255, 0.12) !important;
+  --glass-shadow: none !important;
+  --transition-effects: none !important;
+}
+
+:root.reduced-effects .glass-panel,
+.reduced-effects .glass-panel {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background-color: var(--surface-solid) !important;
+}

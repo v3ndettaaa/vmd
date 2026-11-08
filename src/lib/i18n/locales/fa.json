@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "محیط کاری VMD",
+    "welcome": "به محیط کاری VMD خوش آمدید"
+  },
+  "shell": {
+    "source": "منبع",
+    "live": "زنده",
+    "split": "دوگانه",
+    "reading": "مطالعه",
+    "saved": "ذخیره شد",
+    "unsaved": "ذخیره نشده",
+    "words": "کلمه",
+    "chars": "نویسه"
+  },
+  "actions": {
+    "newDocument": "سند جدید",
+    "openFile": "باز کردن فایل",
+    "openFolder": "باز کردن پوشه",
+    "save": "ذخیره",
+    "settings": "تنظیمات"
+  }
+}
